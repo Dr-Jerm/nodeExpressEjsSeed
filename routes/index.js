@@ -4,18 +4,14 @@
  */
 
 var Util = require('util');
-var FetchMyIp = require('../fetchMyIp');
 var serverIp;
-FetchMyIp.fetch( function (error, ipArray) {
-    serverIp = ipArray[0];
-});
 
 
 
 exports.index = function(req, res){
     console.log(serverIp);
     var options = {
-        serverIp: serverIp,
+        serverIp: '54.221.239.154',
         clientIp: req.connection.remoteAddress
     }
 
